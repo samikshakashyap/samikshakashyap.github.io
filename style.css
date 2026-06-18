@@ -1,50 +1,84 @@
-/* Poore page ki basic settings */
+/* Global Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+    background-color: #f0f4f8;
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-/* Website ka main container/box */
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Header Design */
+header {
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
-    max-width: 400px;
-    width: 100%;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Heading ka style */
-h1 {
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+    color: #bdc3c7;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Section Cards */
+.profile-card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.profile-card h2 {
     color: #2c3e50;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    margin-top: 0;
 }
 
-/* Paragraph ka style */
-p {
-    color: #7f8c8d;
-    font-size: 16px;
-    line-height: 1.6;
+/* Skills List formatting */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Ek chota sa stylish button */
+.skills-list li {
+    background-color: #e8f4fd;
+    color: #2980b9;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Button Style */
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
     background-color: #3498db;
-    color: #fff;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
     transition: background 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn:hover {
