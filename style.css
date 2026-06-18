@@ -84,3 +84,43 @@ header p {
 .btn:hover {
     background-color: #2980b9;
 }
+/* Toggle Button Style */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #1a252f;
+}
+
+/* Dark Mode Styles (Yeh tab apply hoga jab body par 'dark-mode' class aayegi) */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .profile-card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .profile-card h2 {
+    color: #3498db;
+    border-bottom: 2px solid #2980b9;
+}
+
+body.dark-mode .skills-list li {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
