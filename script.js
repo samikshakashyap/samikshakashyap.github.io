@@ -40,7 +40,7 @@ if (chatToggleBtn && floatingChatWindow && closeChatBtn) {
 }
 
 // Gemini API Integration
-const geminiApiKey = "YAHAN_APNA_GEMINI_API_KEY_PASTE_KAREIN"; // <-- Apni API Key yahan quotes ke andar dalein
+const geminiApiKey = "__n8n_BLANK_VALUE_e5362baf-c777-4d57-a609-6eaf1f9e87f6"; // <-- Apni API Key yahan quotes ke andar dalein
 
 const sendBtn = document.getElementById('send-btn');
 const chatInput = document.getElementById('chat-input');
