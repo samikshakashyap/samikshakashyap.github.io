@@ -154,7 +154,7 @@ body.dark-mode .profile-img {
 }
 
 .social-links a {
-    font-size: 4rem; /* Icons ka size */
+    font-size: 3rem; /* Icons ka size */
     color: #3498db;
     transition: transform 0.3s ease, color 0.3s ease;
 }
