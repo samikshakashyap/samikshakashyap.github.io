@@ -167,3 +167,80 @@ body.dark-mode .profile-img {
 body.dark-mode .social-links a {
     color: #bdc3c7;
 }
+/* Project Section Container */
+.project-section {
+    text-align: center;
+    margin: 25px 0;
+}
+
+/* Main Button Style */
+.main-project-btn {
+    background-color: #e74c3c; /* Smart Red/Coral Color */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.main-project-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+
+/* Dropdown Content Styling (Initially Hidden) */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    max-width: 500px;
+    margin: 15px auto 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* Individual Project Card inside Dropdown */
+.project-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.project-item:last-child {
+    border-bottom: none;
+}
+.project-item h3 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+.project-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Show class which will be added via JS */
+.dropdown-content.show {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Support */
+body.dark-mode .dropdown-content {
+    background: #252525;
+}
+body.dark-mode .project-item h3 {
+    color: #ecf0f1;
+}
+body.dark-mode .project-item p {
+    color: #bdc3c7;
+}
