@@ -58,7 +58,7 @@ if (sendBtn && chatInput && chatOutput) {
 
         try {
             // Fetch directly from Gemini Server
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`, {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${__n8n_BLANK_VALUE_e5362baf-c777-4d57-a609-6eaf1f9e87f6}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ contents: [{ parts: [{ text: userMessage }] }] })
