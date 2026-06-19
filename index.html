@@ -75,5 +75,24 @@
     <script src="script.js"></script>
 </body>
 </html>
+<div class="chat-widget-container">
+    <div id="floatingChatWindow" class="chat-window">
+        <div class="chat-header">
+            <h4>🤖 AI Assistant</h4>
+            <button id="closeChatBtn">&times;</button>
+        </div>
+        <div id="chat-output" class="chat-body">
+            <p class="bot-msg">Hello! I am your AI assistant. How can I help you today?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <button id="chatToggleBtn" class="chat-toggle-btn">
+        💬
+    </button>
+</div>
 </body>
 </html>
