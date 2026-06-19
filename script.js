@@ -14,3 +14,13 @@ toggleBtn.addEventListener('click', () => {
         toggleBtn.innerHTML = "🌙 Dark Mode";
     }
 });
+// --- MY PROJECTS BUTTON DROPDOWN LOGIC ---
+const projectBtn = document.getElementById('projectBtn');
+const projectDropdown = document.getElementById('projectDropdown');
+
+if (projectBtn && projectDropdown) {
+    projectBtn.addEventListener('click', () => {
+        // Toggle class 'show' on click
+        projectDropdown.classList.toggle('show');
+    });
+}
