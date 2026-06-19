@@ -244,3 +244,86 @@ body.dark-mode .project-item h3 {
 body.dark-mode .project-item p {
     color: #bdc3c7;
 }
+/* Floating Chat Widget Container */
+.chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: sans-serif;
+}
+
+/* Circular Toggle Button */
+.chat-toggle-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+.chat-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Chat Window Box */
+.chat-window {
+    display: none; /* Shuru mein hidden */
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+.chat-window.show {
+    display: flex; /* Click karne par dikhegi */
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-header h4 { margin: 0; }
+.chat-header button { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+/* Chat Body/Output */
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    font-size: 0.9rem;
+}
+.bot-msg { color: #555; background: #e9ecef; padding: 8px; border-radius: 8px; margin: 5px 0; max-width: 85%; }
+.user-msg { color: white; background: #007bff; padding: 8px; border-radius: 8px; margin: 5px 0; max-width: 85%; margin-left: auto; text-align: right; }
+
+/* Chat Footer/Input Area */
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+.chat-footer input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+.chat-footer button { background: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; }
+
+/* Dark Mode adaptation */
+body.dark-mode .chat-window { background-color: #222; }
+body.dark-mode .chat-body { background-color: #1a1a1a; }
+body.dark-mode .bot-msg { background: #333; color: #eee; }
+body.dark-mode .chat-footer { background: #222; border-color: #444; }
