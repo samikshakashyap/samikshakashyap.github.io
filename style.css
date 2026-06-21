@@ -331,3 +331,15 @@ body.dark-mode .chat-footer { background: #222; border-color: #444; }
     display: block !important;
     opacity: 1 !important;
 }
+/* Jab body par .dark-mode class aaye, toh colors badal jayein */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Dark mode mein sections ke backgrounds bhi dark karne ke liye */
+body.dark-mode .project-section, 
+body.dark-mode .dropdown-content {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
