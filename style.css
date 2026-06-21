@@ -327,3 +327,7 @@ body.dark-mode .chat-window { background-color: #222; }
 body.dark-mode .chat-body { background-color: #1a1a1a; }
 body.dark-mode .bot-msg { background: #333; color: #eee; }
 body.dark-mode .chat-footer { background: #222; border-color: #444; }
+.dropdown-content.show {
+    display: block !important;
+    opacity: 1 !important;
+}
