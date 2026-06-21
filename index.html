@@ -19,20 +19,35 @@
         <h1>Samiksha</h1>
         <p>Diploma in Computer Science Engineering Student | Tech Enthusiast</p>
     </header>
-    <div class="project-section">
-        <button id="projectBtn" class="main-project-btn">📂 My Projects</button>
-        
-        <div id="projectDropdown" class="dropdown-content">
-            <div class="project-item">
-                <h3>🤖 AI Chatbot (N8N + Gemini)</h3>
-                <p>An intelligent chatbot built using N8N automation workflow and powered by Google Gemini API.</p>
-            </div>
-            <div class="project-item">
-                <h3>🌐 Personal Portfolio Website</h3>
-                <p>My interactive portfolio built using HTML, CSS, and JavaScript with dark mode toggle.</p>
-            </div>
+    <div class="project-section" style="text-align: center; margin: 25px 0;">
+    <button id="projectBtn" class="main-project-btn">📂 My Projects</button>
+    
+    <div id="projectDropdown" class="dropdown-content">
+        <div class="project-item">
+            <h3>🤖 AI Assistant (Live Chatbot)</h3>
+            <p>Talk to my Gemini-powered AI Assistant live here.</p>
+        </div>
+        <div class="project-item">
+            <h3>🌐 Personal Portfolio Website</h3>
+            <p>My interactive portfolio built using HTML, CSS, and JavaScript.</p>
         </div>
     </div>
+</div>
+
+<script>
+    // Jaise hi page load hoga, yeh code button ko active kar dega
+    document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.getElementById('projectBtn');
+        const dropdown = document.getElementById('projectDropdown');
+
+        if (btn && dropdown) {
+            btn.onclick = function(e) {
+                e.preventDefault(); // Kisi bhi normal browser behavior ko rokne ke liye
+                dropdown.classList.toggle('show');
+            };
+        }
+    });
+</script>
 
     <div class="container">
         <!-- About Section -->
