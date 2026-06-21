@@ -13,7 +13,32 @@
     <!-- Header Section -->
     <header>
         <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
-        
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // 1. Apne button aur body ko select karein
+        const toggleBtn = document.getElementById('darkModeToggle'); // Agar aapki ID alag hai toh yahan badlein
+        const body = document.body;
+
+        // 2. Check karein ki kya user ne pehle se dark mode on kiya tha (Local Storage)
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        // 3. Button click hone par toggle karein
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                
+                // User ki preference ko yaad rakhne ke liye save karein
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+    });
+</script>
         <img src="avtar images.jpg" alt="Samiksha" class="profile-img">
         
         <h1>Samiksha</h1>
