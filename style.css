@@ -312,10 +312,6 @@ body.dark-mode .project-item p {
 .user-msg { color: white; background: #007bff; padding: 8px; border-radius: 8px; margin: 5px 0; max-width: 85%; margin-left: auto; text-align: right; }
 
 /* Chat Footer/Input Area */
-
-
-
-
 .chat-footer {
     padding: 10px;
     display: flex;
