@@ -343,3 +343,26 @@ body.dark-mode .dropdown-content {
     background-color: #1e1e1e !important;
     color: #ffffff !important;
 }
+.nav-new-page-btn {
+    text-decoration: none;
+    color: white !important;
+    background-color: #007bff; /* Beautiful Blue Color */
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-new-page-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Dark mode mein button ka color automatic sahi rahe */
+body.dark-mode .nav-new-page-btn {
+    background-color: #17a2b8; /* Teal color for dark mode */
+}
+body.dark-mode .nav-new-page-btn:hover {
+    background-color: #138496;
+}
