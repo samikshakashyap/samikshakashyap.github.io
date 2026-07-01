@@ -343,23 +343,3 @@ body.dark-mode .dropdown-content {
     background-color: #1e1e1e !important;
     color: #ffffff !important;
 }
-.right-floating-btn {
-    position: fixed;
-    right: 20px; /* दाईं तरफ (Left का बिल्कुल अपोज़िट) */
-    top: 50%;    /* स्क्रीन के बीच में */
-    transform: translateY(-50%);
-    
-    background-color: #007bff; /* आप अपनी थीम के हिसाब से कलर बदल सकते हैं */
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.right-floating-btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-50%) scale(1.05); /* होवर पर थोड़ा सा पॉप-अप */
-}
