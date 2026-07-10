@@ -3,175 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dancing Doll</title>
+    <title>Coming Soon</title>
     <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #ffffff;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f7d6e0;
-            margin: 0;
+            text-align: center;
             overflow: hidden;
         }
 
-        .doll-container {
-            position: relative;
-            width: 200px;
-            height: 350px;
-            animation: dance 1s infinite ease-in-out;
+        /* Container Layout */
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            width: 90%;
         }
 
-        .head {
-            width: 80px;
-            height: 80px;
-            background-color: #fce4ec;
-            border: 4px solid #c2185b;
-            border-radius: 50%;
-            position: absolute;
-            top: 0;
-            left: 60px;
-            box-shadow: inset -5px -5px 0px rgba(0,0,0,0.1);
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #38bdf8;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
         }
 
-        .hair {
-            width: 90px;
-            height: 40px;
-            background-color: #ff4081;
-            border-radius: 40px 40px 0 0;
-            position: absolute;
-            top: -5px;
-            left: 55px;
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
         }
 
-        .eye-l, .eye-r {
-            width: 12px;
-            height: 12px;
-            background-color: #c2185b;
-            border-radius: 50%;
-            position: absolute;
-            top: 25px;
-            animation: blink 0.5s infinite alternate;
+        p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            line-height: 1.6;
         }
 
-        .eye-l { left: 75px; }
-        .eye-r { left: 115px; }
-
-        .mouth {
-            width: 30px;
-            height: 15px;
-            background-color: #c2185b;
-            border-radius: 0 0 15px 15px;
-            position: absolute;
-            top: 45px;
-            left: 85px;
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
-        .body-shape {
-            width: 100px;
-            height: 120px;
-            background-color: #ff80ab;
-            border: 4px solid #c2185b;
-            border-radius: 50% 50% 20% 20%;
-            position: absolute;
-            top: 85px;
-            left: 50px;
+        .time-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            min-width: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .arm-l, .arm-r {
-            width: 25px;
-            height: 80px;
-            background-color: #fce4ec;
-            border: 4px solid #c2185b;
-            border-radius: 20px;
-            position: absolute;
-            top: 95px;
-            z-index: -1;
+        .time-box span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #38bdf8;
         }
 
-        .arm-l { 
-            left: 25px; 
-            transform-origin: top center;
-            animation: dance-arms-l 0.5s infinite alternate ease-in-out;
+        .time-box label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
         }
 
-        .arm-r { 
-            right: 25px; 
-            transform-origin: top center;
-            animation: dance-arms-r 0.5s infinite alternate ease-in-out;
+        /* Subscription Form */
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 450px;
+            margin: 0 auto;
         }
 
-        .leg-l, .leg-r {
-            width: 25px;
-            height: 90px;
-            background-color: #fce4ec;
-            border: 4px solid #c2185b;
-            border-radius: 20px;
-            position: absolute;
-            top: 200px;
-            z-index: -2;
+        .subscribe-form input[type="email"] {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
         }
 
-        .leg-l { 
-            left: 65px; 
-            transform-origin: top center;
-            animation: dance-legs 0.25s infinite alternate ease-in-out;
+        .subscribe-form input[type="email"]:focus {
+            border-color: #38bdf8;
         }
 
-        .leg-r { 
-            right: 65px; 
-            transform-origin: top center;
-            animation: dance-legs-reverse 0.25s infinite alternate ease-in-out;
+        .subscribe-form button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        /* Animations */
-        @keyframes dance {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(2deg); }
-            100% { transform: translateY(0) rotate(-2deg); }
+        .subscribe-form button:hover {
+            background: #0ea5e9;
         }
 
-        @keyframes dance-arms-l {
-            0% { transform: rotate(10deg); }
-            100% { transform: rotate(-30deg); }
-        }
-
-        @keyframes dance-arms-r {
-            0% { transform: rotate(-10deg); }
-            100% { transform: rotate(30deg); }
-        }
-
-        @keyframes dance-legs {
-            0% { transform: rotate(15deg); }
-            100% { transform: rotate(-15deg); }
-        }
-
-        @keyframes dance-legs-reverse {
-            0% { transform: rotate(-15deg); }
-            100% { transform: rotate(15deg); }
-        }
-
-        @keyframes blink {
-            0% { transform: scaleY(1); }
-            100% { transform: scaleY(0.2); }
+        /* Responsive Optimization */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            .countdown { gap: 0.75rem; }
+            .time-box { min-width: 65px; padding: 0.75rem; }
+            .time-box span { font-size: 1.5rem; }
+            .subscribe-form { flex-direction: column; gap: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="doll-container">
-        <div class="hair"></div>
-        <div class="head">
-            <div class="eye-l"></div>
-            <div class="eye-r"></div>
-            <div class="mouth"></div>
+    <div class="container">
+        <div class="logo">BrandName</div>
+        <h1>Coming Soon</h1>
+        <p>We are working hard to bring you something amazing. Sign up to get notified the second we launch!</p>
+
+        <!-- Countdown Timer Components -->
+        <div class="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <label>Days</label>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <label>Hours</label>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <label>Mins</label>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <label>Secs</label>
+            </div>
         </div>
-        <div class="arm-l"></div>
-        <div class="arm-r"></div>
-        <div class="body-shape"></div>
-        <div class="leg-l"></div>
-        <div class="leg-r"></div>
+
+        <!-- Notification Form -->
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you! We will update you soon.');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Notify Me</button>
+        </form>
     </div>
+
+    <script>
+        // Set the countdown date (Adjust this date to your launch timeline)
+        const launchDate = new Date("Dec 31, 2026 00:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            // Time math calculations
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display results with padded leading zeros
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+
+            // Action when countdown expires
+            if (distance < 0) {
+                clearInterval(timer);
+                document.querySelector(".countdown").innerHTML = "<h3>We have launched!</h3>";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
+
