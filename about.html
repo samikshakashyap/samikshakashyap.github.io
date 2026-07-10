@@ -3,13 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Page</title>
+    <title>Dancing Doll</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7d6e0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .doll-container {
+            position: relative;
+            width: 200px;
+            height: 350px;
+            animation: dance 1s infinite ease-in-out;
+        }
+
+        .head {
+            width: 80px;
+            height: 80px;
+            background-color: #fce4ec;
+            border: 4px solid #c2185b;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 60px;
+            box-shadow: inset -5px -5px 0px rgba(0,0,0,0.1);
+        }
+
+        .hair {
+            width: 90px;
+            height: 40px;
+            background-color: #ff4081;
+            border-radius: 40px 40px 0 0;
+            position: absolute;
+            top: -5px;
+            left: 55px;
+        }
+
+        .eye-l, .eye-r {
+            width: 12px;
+            height: 12px;
+            background-color: #c2185b;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            animation: blink 0.5s infinite alternate;
+        }
+
+        .eye-l { left: 75px; }
+        .eye-r { left: 115px; }
+
+        .mouth {
+            width: 30px;
+            height: 15px;
+            background-color: #c2185b;
+            border-radius: 0 0 15px 15px;
+            position: absolute;
+            top: 45px;
+            left: 85px;
+        }
+
+        .body-shape {
+            width: 100px;
+            height: 120px;
+            background-color: #ff80ab;
+            border: 4px solid #c2185b;
+            border-radius: 50% 50% 20% 20%;
+            position: absolute;
+            top: 85px;
+            left: 50px;
+        }
+
+        .arm-l, .arm-r {
+            width: 25px;
+            height: 80px;
+            background-color: #fce4ec;
+            border: 4px solid #c2185b;
+            border-radius: 20px;
+            position: absolute;
+            top: 95px;
+            z-index: -1;
+        }
+
+        .arm-l { 
+            left: 25px; 
+            transform-origin: top center;
+            animation: dance-arms-l 0.5s infinite alternate ease-in-out;
+        }
+
+        .arm-r { 
+            right: 25px; 
+            transform-origin: top center;
+            animation: dance-arms-r 0.5s infinite alternate ease-in-out;
+        }
+
+        .leg-l, .leg-r {
+            width: 25px;
+            height: 90px;
+            background-color: #fce4ec;
+            border: 4px solid #c2185b;
+            border-radius: 20px;
+            position: absolute;
+            top: 200px;
+            z-index: -2;
+        }
+
+        .leg-l { 
+            left: 65px; 
+            transform-origin: top center;
+            animation: dance-legs 0.25s infinite alternate ease-in-out;
+        }
+
+        .leg-r { 
+            right: 65px; 
+            transform-origin: top center;
+            animation: dance-legs-reverse 0.25s infinite alternate ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes dance {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0) rotate(-2deg); }
+        }
+
+        @keyframes dance-arms-l {
+            0% { transform: rotate(10deg); }
+            100% { transform: rotate(-30deg); }
+        }
+
+        @keyframes dance-arms-r {
+            0% { transform: rotate(-10deg); }
+            100% { transform: rotate(30deg); }
+        }
+
+        @keyframes dance-legs {
+            0% { transform: rotate(15deg); }
+            100% { transform: rotate(-15deg); }
+        }
+
+        @keyframes dance-legs-reverse {
+            0% { transform: rotate(-15deg); }
+            100% { transform: rotate(15deg); }
+        }
+
+        @keyframes blink {
+            0% { transform: scaleY(1); }
+            100% { transform: scaleY(0.2); }
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Hi!</h1>
-    <p>Welcome to my website.</p>
+    <div class="doll-container">
+        <div class="hair"></div>
+        <div class="head">
+            <div class="eye-l"></div>
+            <div class="eye-r"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="arm-l"></div>
+        <div class="arm-r"></div>
+        <div class="body-shape"></div>
+        <div class="leg-l"></div>
+        <div class="leg-r"></div>
+    </div>
 
 </body>
 </html>
-
