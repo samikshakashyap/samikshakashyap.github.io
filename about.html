@@ -3,200 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>UrbanBasket</title>
+
+    <!-- CSS -->
     <style>
-        /* Reset and Base Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f5f5f5;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #ffffff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        /* Container Layout */
-        .container {
-            max-width: 600px;
-            padding: 2rem;
-            width: 90%;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #38bdf8;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-        }
-
-        /* Countdown Timer */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .time-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
-            border-radius: 8px;
-            min-width: 80px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .time-box span {
-            display: block;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #38bdf8;
-        }
-
-        .time-box label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #64748b;
-        }
-
-        /* Subscription Form */
-        .subscribe-form {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .subscribe-form input[type="email"] {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .subscribe-form input[type="email"]:focus {
-            border-color: #38bdf8;
-        }
-
-        .subscribe-form button {
-            background: #38bdf8;
-            color: #0f172a;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .subscribe-form button:hover {
-            background: #0ea5e9;
-        }
-
-        /* Responsive Optimization */
-        @media (max-width: 480px) {
-            h1 { font-size: 2.2rem; }
-            .countdown { gap: 0.75rem; }
-            .time-box { min-width: 65px; padding: 0.75rem; }
-            .time-box span { font-size: 1.5rem; }
-            .subscribe-form { flex-direction: column; gap: 0.75rem; }
+        header{
+            background:#2E7D32;
+            color:white;
+            padding:15px;
+            text-align:center;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo">Urban Basket</div>
-        <h1>Coming Soon</h1>
-        <p>We are working hard to bring you something amazing. Sign up to get notified the second we launch!</p>
+    <header>
+        <h1>UrbanBasket</h1>
+    </header>
 
-        <!-- Countdown Timer Components -->
-        <div class="countdown">
-            <div class="time-box">
-                <span id="days">00</span>
-                <label>Days</label>
-            </div>
-            <div class="time-box">
-                <span id="hours">00</span>
-                <label>Hours</label>
-            </div>
-            <div class="time-box">
-                <span id="minutes">00</span>
-                <label>Mins</label>
-            </div>
-            <div class="time-box">
-                <span id="seconds">00</span>
-                <label>Secs</label>
-            </div>
-        </div>
+    <main>
+        <h2>Welcome to UrbanBasket</h2>
+        <p>Your online grocery store.</p>
 
-        <!-- Notification Form -->
-        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you! We will update you soon.');">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Notify Me</button>
-        </form>
-    </div>
+        <button onclick="welcome()">Click Me</button>
+    </main>
 
+    <!-- JavaScript -->
     <script>
-        // Set the countdown date (Adjust this date to your launch timeline)
-        const launchDate = new Date("jul 17, 2026 00:00:00").getTime();
-
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            // Time math calculations
-            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display results with padded leading zeros
-            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
-            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
-            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
-            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
-
-            // Action when countdown expires
-            if (distance < 0) {
-                clearInterval(timer);
-                document.querySelector(".countdown").innerHTML = "<h3>We have launched!</h3>";
-            }
-        }, 1000);
+        function welcome(){
+            alert("Welcome to UrbanBasket!");
+        }
     </script>
 
 </body>
 </html>
-
