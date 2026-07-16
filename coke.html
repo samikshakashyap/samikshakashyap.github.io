@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks & Drinks Items</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fff9f5; /* Light warm background for food items */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* Responsive Grid Setup */
+        .snacks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Item Card Style */
+        .item-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 15px;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Image Styling */
+        .item-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+        /* Text Styling */
+        .item-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin: 12px 0 6px 0;
+        }
+
+        .item-category {
+            font-size: 0.85rem;
+            color: #e67e22; /* Orange color for food/snacks theme */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Snacks & Drinks List</h1>
+
+    <div class="snacks-grid">
+
+        <!-- Category 1: Biscuits & Chips -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Biscuits">
+            <div class="item-name">Premium Biscuits</div>
+            <div class="item-category">Biscuits & Chips</div>
+        </div>
+
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Potato Chips">
+            <div class="item-name">Potato Chips (Alloo Chips)</div>
+            <div class="item-category">Biscuits & Chips</div>
+        </div>
+
+        <!-- Category 2: Cold Drinks & Juices -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Cold Drinks">
+            <div class="item-name">Soft Drink (Cola)</div>
+            <div class="item-category">Cold Drinks & Juices</div>
+        </div>
+
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Fruit Juice">
+            <div class="item-name">Fresh Fruit Juice</div>
+            <div class="item-category">Cold Drinks & Juices</div>
+        </div>
+
+        <!-- Category 3: Chocolates & Sweets -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Chocolates">
+            <div class="item-name">Milk Chocolate Bar</div>
+            <div class="item-category">Chocolates & Sweets</div>
+        </div>
+
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Sweets">
+            <div class="item-name">Gummy Candies & Sweets</div>
+            <div class="item-category">Chocolates & Sweets</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
