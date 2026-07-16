@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Care Items</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* Responsive Grid Setup */
+        .personal-care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Item Card Style */
+        .item-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 15px;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Image Styling */
+        .item-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+        /* Text Styling */
+        .item-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin: 12px 0 6px 0;
+        }
+
+        .item-category {
+            font-size: 0.85rem;
+            color: #9b59b6; /* Purple color for personal care theme */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Personal Care Items List</h1>
+
+    <div class="personal-care-grid">
+
+        <!-- Item 1: Bathing Soap -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Bathing Soap">
+            <div class="item-name">Bathing Soap (Sabun)</div>
+            <div class="item-category">Body Care</div>
+        </div>
+
+        <!-- Item 2: Shampoo -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Shampoo">
+            <div class="item-name">Hair Shampoo</div>
+            <div class="item-category">Hair Care</div>
+        </div>
+
+        <!-- Item 3: Toothpaste -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Toothpaste">
+            <div class="item-name">Toothpaste</div>
+            <div class="item-category">Oral Care</div>
+        </div>
+
+        <!-- Item 4: Toothbrush -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Toothbrush">
+            <div class="item-name">Toothbrush</div>
+            <div class="item-category">Oral Care</div>
+        </div>
+
+        <!-- Item 5: Hair Oil -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Hair Oil">
+            <div class="item-name">Coconut Hair Oil</div>
+            <div class="item-category">Hair Care</div>
+        </div>
+
+        <!-- Item 6: Handwash -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Handwash">
+            <div class="item-name">Liquid Handwash</div>
+            <div class="item-category">Hygiene</div>
+        </div>
+
+        <!-- Item 7: Face Wash -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Face Wash">
+            <div class="item-name">Face Wash</div>
+            <div class="item-category">Skin Care</div>
+        </div>
+
+        <!-- Item 8: Talcum Powder -->
+        <div class="item-card">
+            <img src="https://unsplash.com" alt="Body Lotion / Powder">
+            <div class="item-name">Body Lotion</div>
+            <div class="item-category">Skin Care</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
