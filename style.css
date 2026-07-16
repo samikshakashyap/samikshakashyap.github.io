@@ -366,3 +366,10 @@ body.dark-mode .nav-new-page-btn {
 body.dark-mode .nav-new-page-btn:hover {
     background-color: #138496;
 }
+.product-img {
+    width: 100%;          /* Photo card ke hisab se fit ho jayegi */
+    height: 150px;        /* Photo ki height set karne ke liye */
+    object-fit: cover;    /* Photo stretch ya kharab nahi hogi */
+    border-radius: 6px;   /* Kono ko thoda round karne ke liye */
+    margin-bottom: 12px;
+}
