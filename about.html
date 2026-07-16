@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni General Store</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-style: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
 
+        /* Header */
+        header {
+            background-color: #2874f0; /* Shop ka primary color (Blue) */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background-color: #e3f2fd;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid #2874f0;
+        }
+        .hero h2 {
+            font-size: 24px;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 30px 0 15px;
+            color: #222;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #2874f0;
+            margin: 8px auto 0;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Card Style */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2874f0;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .card ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Info Section */
+        .info-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid #2874f0;
+        }
+        .info-box h3 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .info-box p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Shop ka Naam aur Contact Info -->
+    <header>
+        <h1>Uttam General Store 🛒</h1>
+        <p>Aapki Rozmarra Ki Zarooraton Ka Ek Matra Thikana</p>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="hero">
+        <h2>Ghar Ka Rashan, Snacks aur Bahut Kuch!</h2>
+        <p>Hamari dukan par sabhi brand ke items uchit rate par milte hain.</p>
+        <!-- WhatsApp Par Order Karne Ka Button -->
+        <a href="https://wa.me/919999999999?text=Hello,%20mujhe%20rashan%20order%20karna%20hai" class="whatsapp-btn" target="_blank">
+            💬 WhatsApp Par Order Karein
+        </a>
+    </div>
+
+    <div class="container">
+        
+        <!-- Categories Section -->
+        <h2 class="section-title">Hamare Products</h2>
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-icon">🌾</div>
+                <h3>Rashan & Groceries</h3>
+                <ul>
+                    <li>Aata, Chawal, Daal</li>
+                    <li>Tel, Masale, Ghee</li>
+                    <li>Chai Patti & Cheeni</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-icon">🧼</div>
+                <h3>Personal Care</h3>
+                <ul>
+                    <li>Sabun & Shampoo</li>
+                    <li>Toothpaste & Brush</li>
+                    <li>Washing Powder</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card -->">
+                <div class="card-icon">🍫</div>
+                <h3>Snacks & Drinks</h3>
+                <ul>
+                    <li>Biscuits & Chips</li>
+                    <li>Cold Drinks & Juices</li>
+                    <li>Chocolates & Sweets</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Store Information Section -->
+        <div class="info-box">
+            <h3>📍 Hamari Shop Ki Details</h3>
+            <p><strong>Shop Ka Pata:</strong> 52 GF SRS CITY SECTOR 6 PALWAL 121102</p>
+            <p><strong>Timings:</strong> Subah 8:00 Baje se Raat 10:00 Baje tak (Sathon din khuli hai)</p>
+            <p><strong>Phone Number:</strong> +91 99999-99999</p>
+            <p><strong>Home Delivery:</strong> Hum 2 km ke daayre me free home delivery dete hain!</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Aapki General Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
